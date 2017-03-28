@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class ReplaceString
 {
 	public static void main(String[] args)
-{
+     {
 	Scanner sc = new Scanner(System.in);
 	String initial = "Hello <<UserName>>, How are you ?";
 	System.out.println("Enter your name ");
@@ -15,6 +15,6 @@ public class ReplaceString
 	}
 	else
 	  System.out.println("String length should be garter than 3");
-}
+     }
 } 
 
