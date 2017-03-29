@@ -1,0 +1,32 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class Flipcoin{
+   public static void main(String[] args){
+	int head = 0;
+	int tail = 0;
+	int count = 0;
+  	Scanner sc = new Scanner();
+	System.out.println("How many times you have to toss");
+	int toss = sc.nextInt();
+
+	while(count <= toss)
+	{
+		Random random = new Random();
+		int randomValue = random.nextInt(1);
+		if(randomValue > 0.5)
+		{
+		 System.out.println("you got HEAD !!");
+		 head++;
+		 count++;
+		}
+		else{
+  		 System.out.println("you got Tail !!");
+		 tail++;
+		 count++;
+                }		
+   	 }
+	System.out.println("Head % = "+(head/count)*100);
+	System.out.println("Tail % = "+(tail/count)*100);
+  }
+}
