@@ -8,7 +8,7 @@ public class StockReport
   Scanner sc = new Scanner(System.in);
   System.out.println("Enter Number Of Companies");  
   int coNumber = sc.nextInt();
-  int count = 0;
+  int count = 0,count2=0;
   double sumAll = 0;
   List l = new ArrayList(); 
 
@@ -33,15 +33,23 @@ public class StockReport
           System.out.print("Stock Name.  Number of shares.  Share Price.  Share Total Value");
 	  System.out.println();
 
+          //for(int i=0; i<l.size(); i++){
+	     //System.out.print(l.get(i).toString());
+          //}
+
 	  Iterator itr = l.iterator();      
 	  while(itr.hasNext())
-               {
-		 Object element = itr.next();
-		 System.out.print(element +"\t\t");
-		
+              {
+	 	 Object element = itr.next();
+                 count2++;
+		 if(count2==5)
+		 System.out.println();
+	 	 System.out.print(element +"\t\t");		
+	      }
+
          System.out.println();
          System.out.println("Total Price of all shares is : "+sumAll);
- }
+  }
 
   public static double shareValue(int shareQuantity, double sharePrice)
    {
