@@ -9,6 +9,9 @@ public class StockReport
   System.out.println("Enter Number Of Companies");  
   int coNumber = sc.nextInt();
   int count = 0;
+  double sumAll = 0;
+  List l = new ArrayList(); 
+
   while(count<coNumber)
     {
           System.out.println("Enter Stock Name");
@@ -18,24 +21,26 @@ public class StockReport
 	  System.out.println("Enter Share Price");
 	  double sharePrice = sc.nextDouble();
           double price1 = shareValue(shareQuantity, sharePrice); 
-          
-          List l = new ArrayList();   
+          sumAll += price1;
+            
 	  l.add(stockName);
 	  l.add(shareQuantity);
 	  l.add(sharePrice);
-	  l.add(price1);
-      
-	  System.out.print("Stock Name.  Number of shares.  Share Price.  Share Total Value");
+	  l.add(price1);      
+          count++;
+   }
+
+          System.out.print("Stock Name.  Number of shares.  Share Price.  Share Total Value");
 	  System.out.println();
 
-	      Iterator itr = l.iterator();      
-	      while(itr.hasNext()) {
+	  Iterator itr = l.iterator();      
+	  while(itr.hasNext())
+               {
 		 Object element = itr.next();
-		 System.out.print(element + "\t\t");
-	      }
-              System.out.println();
-    count++;
-   }
+		 System.out.print(element +"\t\t");
+		
+         System.out.println();
+         System.out.println("Total Price of all shares is : "+sumAll);
  }
 
   public static double shareValue(int shareQuantity, double sharePrice)
