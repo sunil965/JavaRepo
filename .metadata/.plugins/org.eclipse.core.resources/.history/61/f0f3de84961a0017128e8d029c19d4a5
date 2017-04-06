@@ -28,7 +28,7 @@ public class Parentheses {
 			System.out.println("Expression is balanced");
 		else
 			System.out.println("Not balanced");
-	 }
+	}
 	
 	
 	

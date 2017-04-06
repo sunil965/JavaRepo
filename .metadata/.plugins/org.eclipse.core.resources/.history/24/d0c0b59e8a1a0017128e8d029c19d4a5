@@ -4,13 +4,13 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UnorderdList 
 {
 	File file = new File("/home/bridgeit/JavaRepo/datastructure/src/list/fileofwords.txt");
-	LinkedList list = new LinkedList();
+	ArrayList list = new ArrayList();
     
 	public void read() throws IOException
 	{		
