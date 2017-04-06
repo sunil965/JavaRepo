@@ -1,0 +1,33 @@
+
+public class InsertionSort {
+
+	public static void main(String[] args) {
+		String[] arr = {"cat", "rat", "bat","apple"};
+		int n = arr.length;
+		
+		System.out.println("Array before  sorting...");
+		for(String a:arr){
+			System.out.print(a);
+		}
+		
+		InsertionSort bs = new InsertionSort();
+		bs.sort(arr, n);
+		
+		System.out.println("\n Array after sorting...");
+		for(int a:arr){
+			System.out.print(a+ " ");
+		}
+	}
+	
+	public void sort(String a[] , int n){
+		for(int i=1; i<n-1; i++){
+			String data = a[i];
+			int hole = i;
+			while(hole>0 && a[hole-1]>data){
+				a[hole] = a[hole-1];
+				hole = hole-1;
+			}
+			a[hole] = data;
+		}
+}
+}

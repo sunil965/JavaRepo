@@ -1,0 +1,71 @@
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class BinarySearchString { 
+	
+	public static void main(String[] args) throws IOException 
+	 {  
+	   Scanner sc = new Scanner(System.in); 	
+	  
+	    File file = new File("/home/bridgeit/Desktop/sample.txt");		
+		FileInputStream fis = new FileInputStream(file);
+		
+		String str = "";        
+        int content;
+        while ((content = fis.read()) != -1)
+        {
+                                       // convert to char
+               str += (char) content;
+        }
+	   
+	   System.out.println(str);
+	   System.out.println("..............Creation of Array..............");
+
+	   String[] strArray = str.split(",");
+	   for(String s :strArray)
+	   {
+		   System.out.println(s);
+	   }
+	   System.out.println("............After Sorting...............");
+	   
+	   Arrays.sort(strArray);
+	   for(String s:strArray)
+	   {
+		   System.out.println(s);
+	   }
+
+	   System.out.println("Which word you have to search.");
+	   String word = sc.next();
+
+	  	int result = binarySearch(strArray, word);
+		System.out.println("Your searched word is at index "+result);
+		fis.close();
+		sc.close();
+	 }
+
+	  public static int binarySearch(String array[], String value)
+	  {
+	      int first = 0;
+	      int last = array.length - 1;
+	  	 if(first > last) System.out.println("No words !");
+		    
+			while(first < last)
+			{
+				int mid = first + (last - first)/2;
+				if(value.compareTo(array[mid])==0)
+					return mid;
+				
+			        if(value.compareTo(array[mid])<0)
+					last = mid-1; 
+			        else
+			          first = mid+1;
+			 }
+		     return -1;
+			
+	   }
+
+}

@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+
+public class UtilitySort 
+{
+  // Binary search meathod for STRING.
+	public static int binarySearch(String array[], String value)
+	  {
+	      int first = 0;
+	      int last = array.length - 1;		    
+		  while(first < last)
+			{
+				int mid = first + (last - first)/2;
+				if(value.compareTo(array[mid])==0)
+					return mid;
+				
+			        if(value.compareTo(array[mid])<0)
+					last = mid-1; 
+			        else
+			          first = mid+1;
+			 }
+		     return -1;
+			
+	   }
+	
+	
+	// Binary search method for INTEGER
+    public int secret(int low, int high)
+    {
+		
+		
+		if((high - low)==1)		
+			return low;		
+		int mid = low + (high - low)/2;
+		System.out.println("Is less then "+mid);		
+		Scanner sc = new Scanner(System.in);
+		if(status = sc.nextBoolean())
+					return secret(low, mid );
+				else 
+					return secret(mid,high);
+
+	}
+  
+  public static void main(String[] args)
+  {
+	  
+  }
+}

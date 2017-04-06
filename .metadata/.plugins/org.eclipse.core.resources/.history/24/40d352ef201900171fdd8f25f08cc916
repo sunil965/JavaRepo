@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+
+public class InsertionSort {
+
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("No of string ?");
+		String[] arr = new String[4];
+		System.out.println("Enter Strings ");
+		for(int k=0; k<4; k++)
+		{
+			arr[k]=sc.next();
+		}
+		int n = arr.length;
+		
+		System.out.println("Array before  sorting...");
+		for(String a:arr){
+			System.out.print(a+" ");
+		}
+		
+		sort(arr, n);
+		
+	   System.out.println("\n Array after sorting...");
+		for(String a:arr){
+			System.out.print(a+ " ");
+		}
+				
+	}
+	
+	public static void sort(String a[] , int n)
+	{
+		for(int i=1; i<n; i++){
+			String data = a[i];
+			int hole = i;
+			
+			while((hole>0) && (data.compareTo(a[hole-1]))<0)
+			{
+				a[hole] = a[hole-1];
+				hole--;
+			}
+			a[hole] = data;
+		}
+}
+}

@@ -1,0 +1,26 @@
+package list;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class UnorderdList {
+
+	public static void main(String[] args) throws IOException {
+		File file = new File("/home/bridgeit/JavaRepo/datastructure/src/list/fileofwords.txt");
+		FileInputStream fis = new FileInputStream(file);
+		
+		ArrayList list = new ArrayList();
+		String str = "";        
+        int content;
+        while ((content = fis.read()) != -1)
+        {                                       // convert to char
+               str += (char) content;
+        }
+		System.out.println(str);
+	}
+
+}
