@@ -1,0 +1,23 @@
+package list;
+
+import java.util.*;
+import java.util.Scanner;
+
+public class CheckPalindrome {
+
+public static void main(String[] args) {
+		
+ List list = new LinkedList();
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter any string.");
+		String userInput = scan.next();
+		
+		for(int i=0;i<userInput.length(); i++)
+		{
+			list.add(userInput.charAt(i));
+
+		}
+
+	}
+}

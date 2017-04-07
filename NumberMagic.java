@@ -6,10 +6,10 @@ public class NumberMagic{
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter limit for steps ");
-		int limit = sc.nextInt();
-		int number = (int) Math.pow(2, limit);
-		int high = number-1;
-		System.out.println("Select a number between 0 and "+ high);
+		//int limit = sc.nextInt();
+		//int number = (int) Math.pow(2, limit);
+		int high = sc.nextInt();
+		System.out.println("Select a number between 0 and "+ high+"-1");
 		
 		int num = nm.secret(0, high);
 		System.out.println("Your number is "+num);
