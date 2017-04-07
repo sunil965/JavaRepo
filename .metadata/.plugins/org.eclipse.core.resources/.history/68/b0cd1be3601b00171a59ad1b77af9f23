@@ -1,0 +1,24 @@
+package list;
+
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
+public class Palindrome {
+
+	public static void main(String[] args) {
+		Queue deque = new LinkedList();
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter a string..");
+		String input = scan.next();
+		
+		for(int i=0; i<input.length(); i++){
+//			char element = input.charAt(i);
+			deque.add(input.charAt(i));
+		}
+
+	}
+
+}

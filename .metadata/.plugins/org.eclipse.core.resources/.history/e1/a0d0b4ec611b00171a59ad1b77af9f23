@@ -1,0 +1,22 @@
+package list;
+
+import java.util.*;
+
+
+public class Palindrome {
+
+	public static void main(String[] args) {
+		LinkedList list = new LinkedList();
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter a string..");
+		String input = scan.next();
+		
+		for(int i=0; i<input.length(); i++){
+			char element = input.charAt(i);
+			list.add(element);
+		}
+
+	}
+
+}
