@@ -1,0 +1,17 @@
+package list;
+
+public class VendingMachine {
+
+	public static void main(String[] args) {
+	
+		int note1000;
+		int note500;
+		int note100;
+		int note50;
+		int note10;
+		int note2;
+		int note1;
+		
+	}
+
+}
