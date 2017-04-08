@@ -1,0 +1,32 @@
+package list;
+
+import java.util.*;
+import java.util.Scanner;
+
+public class CheckPalindrome {
+
+public static void main(String[] args) {
+		
+		Deque list = new LinkedList();
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter any string.");
+		String userInput = scan.next();
+		
+		for(int i=0;i<userInput.length(); i++)
+		{			
+			list.add(userInput.charAt(i));			
+		}
+//		 System.out.println(list);
+//		 System.out.println("");		
+		 String reverse = "";
+		while(!list.isEmpty())
+		{
+			reverse += list.removeLast();			
+		}
+		if(userInput==reverse)
+		   System.out.println(userInput+" is palindrome");
+		else
+			System.out.println(userInput+" is not palindrome.");
+	}
+}

@@ -1,0 +1,22 @@
+package bank.cash.counter;
+
+public class Customer {
+
+	double amount;
+	@Override
+	public String toString() {
+		return "Customer [amount=" + amount + "]";
+	}
+	public double getAmount() {
+		return amount;
+	}
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+	public Customer(double amount) 
+	{
+		super();
+		this.amount = amount;
+	}
+	
+}

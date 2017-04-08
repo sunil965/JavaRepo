@@ -1,0 +1,17 @@
+package bank.cash.counter;
+
+import java.util.Scanner;
+
+public class Customer {
+
+	double amount;
+	public Customer(double amount, String name) 
+	{
+		super();
+		this.amount = amount;
+		this.name = name;
+	}
+	String name; 
+	
+	
+}

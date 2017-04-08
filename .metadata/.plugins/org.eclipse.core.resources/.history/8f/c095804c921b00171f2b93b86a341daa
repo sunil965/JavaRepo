@@ -1,0 +1,18 @@
+package bank.cash.counter;
+
+public class Customer {
+
+	double balance =0;
+	
+	public double deposite(double amount)
+	{
+		balance = balance + amount;
+		return balance;
+	}
+	
+	public double withdraw(double amount)
+	{
+		balance = balance - amount;
+		return balance;
+	}
+}

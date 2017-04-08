@@ -1,0 +1,7 @@
+package bank.cash.counter;
+
+public class Customer {
+
+	double balance =0;
+	double amount = 0;
+}

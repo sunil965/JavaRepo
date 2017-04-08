@@ -1,0 +1,16 @@
+package bank.cash.counter;
+
+public class Customer {
+
+	double balance =0;
+	
+	public void deposite(double amount)
+	{
+		balance = balance + amount;
+	}
+	
+	public void withdraw(double amount)
+	{
+		balance = balance - amount;
+	}
+}

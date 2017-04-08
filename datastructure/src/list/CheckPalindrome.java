@@ -5,26 +5,32 @@ import java.util.Scanner;
 
 public class CheckPalindrome {
 
-public static void main(String[] args) {
-		
-		Deque list = new LinkedList();
+	public static void main(String[] args) 
+	{
+	    CheckPalindrome object = new CheckPalindrome();		
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("Enter any string.");
 		String userInput = scan.next();
-		
-		for(int i=userInput.length(); i>=0; i--)
-		{			
-			list.add(userInput.charAt(i));
-			
-		}
-		 System.out.println(list);
-		 System.out.println("");
-		
-		String reversrString = "";
-		for(int j=-1; j<=list.size(); j++){
-			reversrString += list.poll();
-			
-		}System.out.println(reversrString);
+		object.isPalindrome(userInput);
 	}
+
+    public void isPalindrome(String input)
+     {
+    	Deque list = new LinkedList();    	
+	    for(int i=input.length()-1; i>=0; i--)
+		{			
+			list.add(input.charAt(i));			
+		}
+	   System.out.println(list);
+		 String reverse = "";
+		while(!list.isEmpty())
+		{
+			reverse += list.remove();			
+		}
+		if(input.equals(reverse))
+		   System.out.println(input+" is palindrome");
+		else
+			System.out.println(input+" is not palindrome.");
+  }
 }
