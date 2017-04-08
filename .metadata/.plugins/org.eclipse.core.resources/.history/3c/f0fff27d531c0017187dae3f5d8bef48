@@ -8,7 +8,9 @@ public class Bank {
 
 	static double bankBalance = 50000;
 	Scanner scan = new Scanner(System.in);
+	
 	static Queue list = new LinkedList();
+	
 	@SuppressWarnings("resource")
 	public static void main(String[] args)
 	{

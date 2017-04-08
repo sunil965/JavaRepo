@@ -6,8 +6,8 @@ import java.util.Queue;
 import java.util.Scanner;
 
 public class Tansaction {
+	Scanner scan = new Scanner(System.in);
 
-	@SuppressWarnings("resource")
 	public void bankOPeration(Queue list, double bankBalance) 
 	{
 		double balance;
@@ -16,7 +16,7 @@ public class Tansaction {
 		{ 
 			Customer customer = (Customer) list.remove();
 			System.out.println("\n What you want Withdraw or Deposite");
-			String operation = new Scanner(System.in).next();
+			String operation = scan.next();
 			if (operation.equalsIgnoreCase("deposite")) {
 				bankBalance = bankBalance + customer.getAmount();
 				balance = customer.getBalance() + customer.getAmount();

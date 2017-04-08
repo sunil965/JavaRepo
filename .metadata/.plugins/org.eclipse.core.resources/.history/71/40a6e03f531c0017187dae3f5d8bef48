@@ -8,7 +8,9 @@ public class Bank {
 
 	static double bankBalance = 50000;
 	Scanner scan = new Scanner(System.in);
+	
 	static Queue list = new LinkedList();
+	
 	@SuppressWarnings("resource")
 	public static void main(String[] args)
 	{
@@ -24,7 +26,14 @@ public class Bank {
 		 double amount = new Scanner(System.in).nextDouble();		 
 		 list.add(new Customer(name, amount));
 	 }
+	 System.out.println(list);
 	 Tansaction transaction = new Tansaction();
+	 //System.out.println(list);
 	 transaction.bankOPeration(list, bankBalance);
+//	 Bank bank = new Bank();
+//	 bank.transaction(list);
 	}
+	
+
+	
 }
