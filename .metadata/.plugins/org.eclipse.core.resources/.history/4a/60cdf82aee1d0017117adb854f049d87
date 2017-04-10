@@ -46,18 +46,19 @@ public class Hashmapping {
 			if(list[position].contains(num)) {
 				list[position].removeFirstOccurrence(num);
 			  }
-			else {
-				  list[position].add(num);
-			     }
+			else { 
+				list[position].add(num);
+			  }
 		
+ 
 	      	System.out.println("Hashmap Without Repeated Element"+hash);
 		
-			FileWriter fileWriter = new FileWriter(new File("/home/bridgeit/JavaRepo/Java/src/hashresult.txt"));
-			for (int i = 0; i < hash.size(); i++) {
-				fileWriter.write(hash.get(i) + " ");
-				fileWriter.flush();
-			  }
-			fileWriter.close();
+		FileWriter fileWriter = new FileWriter(new File("/home/bridgeit/JavaRepo/Java/src/hashresult.txt"));
+		for (int i = 0; i < hash.size(); i++) {
+			fileWriter.write(hash.get(i) + " ");
+			fileWriter.flush();
+		  }
+		fileWriter.close();
 		
 	}
 }

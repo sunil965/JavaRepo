@@ -46,8 +46,7 @@ public class Hashmapping {
 			if(list[position].contains(num)) {
 				list[position].removeFirstOccurrence(num);
 			  }
-			else {
-				  list[position].add(num);
+			else { list[position].add(num);
 			     }
 		
 	      	System.out.println("Hashmap Without Repeated Element"+hash);
