@@ -1,0 +1,28 @@
+package com.bridgelabz.java;
+
+import com.bridgelabz.utlity.Utility;
+
+public class RegularExpression {
+	
+	public static void main(String[] args) {
+		
+		Utility ul = new Utility();
+		
+//		String message = ul.readFileContent("/home/bridgeit/JavaRepo/Test/src/RegexFile.txt");
+//		System.out.println("Message : "+message);
+//		
+//		System.out.println("Enter Name");
+//		String name = ul.getString(); 
+//		
+//		System.out.println("Enter Full Name");
+//		String fullName = ul.getString();
+//		
+//		System.out.println("ENter your Cell Number");
+//		int contact = ul.getInteger();
+		
+		System.out.println("Enter date in DD/MM/YY");
+		String date = ul.getDate();
+		System.out.println(date);
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.bridgelabz.java;
+
+import com.bridgelabz.utlity.Utility;
+
+public class Hashmapping {
+	
+	public static void main(String[] args) {
+		Utility ult = new Utility();
+		String number = ult.readFileContent("/home/bridgeit/JavaRepo/Java/src/HashFile.txt");
+		
+		String[] strArray = number.split(",");
+		
+		for(String s:strArray)
+		   {System.out.println(s); }
+	}
+
+}

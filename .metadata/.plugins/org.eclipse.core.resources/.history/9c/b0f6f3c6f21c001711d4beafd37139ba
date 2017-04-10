@@ -1,0 +1,24 @@
+package com.bridgelabz.utlity;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Utility {
+	Scanner scan = new Scanner(System.in);
+	
+	public String getString(){
+		return scan.nextLine(); 
+	}
+	public String readFileContent() {
+		File file= new File("/home/bridgeit/JavaRepo/Test/src/RegexFile.txt");
+		FileInputStream fileInput = new FileInputStream(file);
+		int content;
+		String string="";
+		while((content = fileInput.read())!=-1){
+			string = string + content;
+		}
+		return string;
+	}
+}
