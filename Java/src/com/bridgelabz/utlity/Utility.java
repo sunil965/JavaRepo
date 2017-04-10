@@ -39,15 +39,6 @@ public class Utility {
 		return string;
 	}
 	
-	// read numberfile via scanner.
-//	public int readScanner(String path){
-//		String fileInput = new Scanner(new File("/home/bridgeit/JavaRepo/Java/src/HashFile.txt")).useDelimiter("\\Z").next();
-//		String[] stringArray = fileInput.split(",");
-//		int[] intArray;
-//		while(stringArray.hasn)
-//		
-//		return array;
-//	}
-	
+
 	
 }

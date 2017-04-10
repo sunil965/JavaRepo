@@ -1,0 +1,33 @@
+package com.bridgelabz.java;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+
+import com.bridgelabz.utlity.Utility;
+
+public class Hashmapping {
+	
+	public static void main(String[] args) {
+		Utility ul = new Utility();
+		String string = ul.readFileContent("/home/bridgeit/JavaRepo/Java/src/HashFile.txt");
+		
+		String[] strArray = string.split(",");
+		int[] intarray = new int[strArray.length];
+		int i=0;
+		for(String s:strArray)
+		   {
+			intarray[i] = Integer.parseInt(s);
+			i++;
+			}
+		
+		System.out.println("How many slots ?");
+		int nSlots = ul.getInteger();
+		
+		HashMap<Integer, ArrayList<Integer>> hash = new HashMap<Integer, ArrayList<Integer>>();
+		ArrayList<Integer> number = new ArrayList<>();
+		
+	}
+
+}
