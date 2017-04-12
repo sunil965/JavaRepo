@@ -15,7 +15,7 @@ public class DataInventory {
 		     double itemTotal = 0;
 		     double grossTotal = 0;
 		     JSONParser parser = new JSONParser();
-//		     Iterator iterator;
+
 		try {
 			Object object = parser.parse(new FileReader("/home/bridgeit/JavaRepo/Java/src/JSON.txt"));
 			JSONObject jsonObj1 = (JSONObject) object;
@@ -44,9 +44,7 @@ public class DataInventory {
 			        itemTotal += itemPrice;
 			        System.out.println("\nItem Price : "+itemPrice);
 			        System.out.println("\n..........xxxx........\n");
-			        
 				}
-					
 					System.out.println("=====");
 					System.out.println("Item Total Price : "+itemTotal);
 					System.out.println("=====");
@@ -54,33 +52,8 @@ public class DataInventory {
 					itemTotal = 0;
 					grossTotal += total; 
 			}
-			
 		    System.out.println("Total Price : "+grossTotal);
 		    grossTotal=0;
-			
-																			//			System.out.println(jsonObj);
-																			//            JSONArray Rice = (JSONArray) jsonObj1.get("Rice"); 
-																			//            System.out.println("\nRice Details:\n");
-																			//            iterator = Rice.iterator();
-																			//            while (iterator.hasNext()) {
-																			//                System.out.println(iterator.next());
-																			//            }
-																			//            
-																			//            JSONArray wheat = (JSONArray) jsonObj1.get("Nissan");
-																			//            System.out.println("\nNIsaan Detals.\n");       
-																			//            iterator = wheat.iterator();
-																			//            while (iterator.hasNext()) {
-																			//				System.out.println(iterator.next());
-																			//				
-																			//				
-																			//			}
-																			//            
-																			//            JSONArray pulse = (JSONArray) jsonObj1.get("Pulse");
-																			//            System.out.println("\nPulse Details.\n");
-																			//            iterator = pulse.iterator();
-																			//            while (iterator.hasNext()) {
-																			//				System.out.println(iterator.next());				
-																			//			}
 		} 
 		catch (Exception e) {
 			e.getMessage();

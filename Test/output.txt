@@ -1,1 +1,1 @@
-{"data":[[{"price":"15","name":"A_Class","weight":"10"},{"name":"B_Class"},{"name":"C_Class"}],[{"name":"1st"},{"name":"2nd"},{"name":"3rd"}],[{"name":"Abc"},{"name":"Xyz"},{"name":"Mno"}]]}
+{"data":[[{"price":"25","name":"A_Class","weight":"10"},{"price":"30","name":"B_Class","weight":"20"},{"price":"35","name":"C_Class","weight":"13"}],[{"price":"75","name":"1st","weight":5},{"name":"2nd"},{"name":"3rd"}],[{"name":"Abc"},{"name":"Xyz"},{"name":"Mno"}]]}
