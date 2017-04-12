@@ -6,8 +6,11 @@ public class Stopwatch {
 
 	public static void main(String[] args) {
 		Utility utility = new Utility();
-		double startTime = System.currentTimeMillis();
-		double stopTime;
+		Stopwatch watch = new Stopwatch();
+		
+		double startTime, stopTime, elapsedTime;
+		startTime = System.currentTimeMillis();
+		
 		System.out.println("Count number upto....");
 		int number = utility.getInteger();  
 		for(int i=1; i<=number;i++){
@@ -20,8 +23,15 @@ public class Stopwatch {
 			}
 		}
 		stopTime = System.currentTimeMillis();
-		double elapsedTime = (stopTime-startTime)/1000;
-		System.out.println("\nTotal Time in Counting : "+elapsedTime+" sec.");
+		elapsedTime = watch.elapse(startTime, stopTime);
+		System.out.println("Elapse time : "+elapsedTime);
+	   
 	}
+	
+	public double elapse(double start, double stop){
+		double elapsedTime = (stop-start)/1000;
+			return elapsedTime;
+	}
+	
 
 }

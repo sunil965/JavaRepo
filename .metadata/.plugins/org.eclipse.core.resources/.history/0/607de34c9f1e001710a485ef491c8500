@@ -1,0 +1,18 @@
+{
+
+"Rice":[{"name":"A_Class","weight":"20kg","price":250},
+          {"name":"B_Class","weight":"15kg","price":300},
+          {"name":"C_Class","weight":"10kg","price":200}
+         ],
+
+"Pulses":[{"name":"1st_Class","weight":"10kg","price":150},
+           {"name":"2nd_Class","weight":"5kg","price":450},
+           {"name":"3rd_Class","weight":"30kg","price":50}
+           ],
+
+"Wheat":[{"name":"Abc","weight":"10kg","price":150},
+           {"name":"Xyz","weight":"20kg","price":250},
+           {"name":"Mno","weight":"30kg","price":350}
+          ]
+
+}

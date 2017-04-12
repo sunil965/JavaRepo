@@ -1,0 +1,56 @@
+import java.util.Date;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+public class Test {
+
+  public static void main(String[] args) {
+	  
+	 JSONObject obj = new JSONObject();
+	 
+	 JSONArray riceList = new JSONArray();
+	 riceList.add("A_Class");
+	 riceList.add("B_Class");
+	 riceList.add("C_Class");
+	 obj.put("Rice", riceList);
+	 
+	 JSONArray pulseList = new JSONArray();
+	 pulseList.add("A_Class");
+	 pulseList.add("B_Class");
+	 pulseList.add("C_Class");
+	 obj.put("Rice", pulseList);
+	 
+	 
+	 JSONArray wheatList = new JSONArray();
+	 wheatList.add("A_Class");
+	 wheatList.add("B_Class");
+	 wheatList.add("C_Class");
+	 obj.put("Rice", wheatList);
+	 
+	 
+	 
+	 
+	 JSONArray dataList = new JSONArray();
+	 dataList.add(pulseList);
+	 dataList.add(pulseList);
+	 dataList.add(pulseList);
+	 obj.put("data", dataList);
+	 
+	 System.out.print(obj);
+	 try (FileWriter file = new FileWriter("/home/bridgeit/JavaRepo/Test/output.txt")) {
+
+         file.write(obj.toJSONString());
+         file.flush();
+
+     } catch (IOException e) {
+         e.printStackTrace();
+     }
+
+
+  }
+}

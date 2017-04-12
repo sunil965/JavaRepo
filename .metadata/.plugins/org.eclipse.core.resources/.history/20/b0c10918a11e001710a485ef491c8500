@@ -1,0 +1,18 @@
+{"data":[
+
+{"Rice":[{"name":"A_Class","weight":"20","price":250},
+          {"name":"B_Class","weight":"15","price":300},
+          {"name":"C_Class","weight":"10","price":200}
+         ]},
+
+{"Pulses":[{"name":"1st_Class","weight":"10","price":150},
+           {"name":"2nd_Class","weight":"5","price":450},
+           {"name":"3rd_Class","weight":"30","price":50}
+           ]},
+
+{"Wheat":[{"name":"Abc","weight":"10","price":150},
+           {"name":"Xyz","weight":"20","price":250},
+           {"name":"Mno","weight":"30","price":350}
+          ]}
+
+]}

@@ -1,0 +1,7 @@
+{"Rice":[{"name : Basmati","weight:10kg","price:45"},
+		 {"name":"B_Class","weight":"15kg","price":300},
+         {"name":"C_Class","weight":"10kg","price":200}
+        ],
+ "Pulse":["name:Toor","weight:5kg","price:80rup/kg"],
+ "Wheat":["name:Lokwan","weight:15kg","price:35rup/kg"]
+}

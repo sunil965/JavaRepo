@@ -1,0 +1,6 @@
+{
+"Pulses":[{"name":"Tur","weight":"10kg","price":150},
+           {"name":"Moong","weight":"5kg","price":450},
+           {"name":"Masoor","weight":"30kg","price":50}
+           ]
+}

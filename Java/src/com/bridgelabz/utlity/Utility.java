@@ -2,9 +2,14 @@ package com.bridgelabz.utlity;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
+
+import com.sun.org.apache.bcel.internal.generic.NEW;
+
+import javafx.scene.input.DataFormat;
 
 public class Utility {
 	Scanner scan = new Scanner(System.in);
@@ -22,9 +27,9 @@ public class Utility {
 	
 	// to get a Integer input
 		public String getDate(){
-			Date date = new Date();
-			String newstring = new SimpleDateFormat("DD/MM/YYYY").format(date);
-			return newstring; 
+			DateFormat dateformat = new SimpleDateFormat("DD/MM/YYYY");
+			String date = dateformat.format(new Date());
+			return date; 
 		}
 		
 	// to read from file.

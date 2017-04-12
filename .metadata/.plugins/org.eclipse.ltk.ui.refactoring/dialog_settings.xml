@@ -4,6 +4,8 @@
 		<item key="width" value="600"/>
 		<item value="400" key="height"/>
 	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+	</section>
 	<section name="InferTypeArguments">
 		<item key="leaveUnconstrainedRaw" value="true"/>
 		<item value="true" key="assumeCloneReturnsSameType"/>

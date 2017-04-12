@@ -1,0 +1,7 @@
+{"Rice":["name : Basmati","weight:10kg","price:45rup/kg"],
+ "Pulse":["name:Toor","weight:5kg","price:80rup/kg"],
+ "Nissan": [
+            {"model":"Sentra", "doors":4},
+            {"model":"Maxima", "doors":4}
+        ]
+}

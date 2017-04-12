@@ -1,0 +1,35 @@
+import java.util.Date;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+public class Test {
+
+  public static void main(String[] args) {
+	  
+	 JSONObject obj = new JSONObject();
+	 
+	 
+	 JSONArray list = new JSONArray();
+	 list.add("Rice--");
+	 list.add("Pulse--");
+	 list.add("Wheat--");
+	 
+	 obj.put("data", list);
+	    System.out.print(obj);
+	 try (FileWriter file = new FileWriter("/home/bridgeit/JavaRepo/Test/output.txt")) {
+
+         file.write(obj.toJSONString());
+         file.flush();
+
+     } catch (IOException e) {
+         e.printStackTrace();
+     }
+
+
+  }
+}
