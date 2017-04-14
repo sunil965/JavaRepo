@@ -1,0 +1,20 @@
+package com.bridgelabz.controller;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class AddressController {
+    
+	AddressBook addBook = new AddressBook();
+
+	public void addToBook(){
+		addBook.addPerson();
+	}
+	
+	public void deleteFromBook(){
+		
+	}
+
+}

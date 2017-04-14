@@ -1,0 +1,9 @@
+package com.bridgelabz.controller;
+
+public class AddressController {
+ 
+	AddressBook addBook = new AddressBook();
+	String person = addBook.addPerson();
+	
+//	service
+}
