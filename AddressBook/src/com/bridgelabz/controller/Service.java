@@ -6,4 +6,10 @@ public interface Service {
 	void delete();
 	
 	void printList();
+	
+	void edit();
+	
+	void sortByLastName();
+	
+	void sortByLastZIP();
 }

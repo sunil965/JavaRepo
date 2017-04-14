@@ -17,8 +17,21 @@ public class AddressController {
 		addressBook.delete();
 	}
 	
-	public void displayAddressbook(){
+	public void displayAddressBook(){
 		addressBook.printList();
 	}
+	
+	public void editAddressBook(){
+		addressBook.edit();
+	}
+	
+	public void sortByLastNameBook(){
+		addressBook.sortByLastName();
+	}
+	
+	public void sortByZIP(){
+		addressBook.sortByLastZIP();
+	}
+
 
 }
