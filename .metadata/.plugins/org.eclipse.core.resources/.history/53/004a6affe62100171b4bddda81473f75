@@ -81,7 +81,7 @@ public class AddressBook implements Service {
 		}
 	}
 
-	public void printListSeperately() {
+	public void printListSeperately(String bookname) {
 
 		System.out.println("Select Address Book");
 		String addressBookName = scan.next();

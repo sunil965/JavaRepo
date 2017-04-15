@@ -13,6 +13,4 @@ void addPerson(String bookname);
 	void sortByLastName(String bookname);
 	
 	void sortByLastZIP(String bookname);
-
-	void printListSeperately();
 }

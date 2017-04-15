@@ -15,11 +15,34 @@ public class AddressBook implements Service {
 
 	Person person;
 	Scanner scan = new Scanner(System.in);
-	// String bookname = "friend";
+	int numberofaddressbook = 0;
+	String[] addressbook = new String[10];
+
+	String bookname = "";
 	List<Person> list = new LinkedList<Person>();
 	Map<String, List> hashObj = new HashMap<String, List>();
 
-	public void addPerson(String bookname) {
+	public void addPerson() {
+
+		if (numberofaddressbook == 0) {
+			System.out.println("Address Book Not Available, Press 1 to Create First ");
+			int userchoice = scan.nextInt();
+
+			if (userchoice == 1) {
+				createNewAddressBook();
+			} else {
+				return;
+			}
+
+		} else {
+			for (int select = 0; select < numberofaddressbook; select++) {
+				System.out.println(select + " " + addressbook[select]);
+			}
+			System.out.println("Select Your Address Book By Their Index");
+			int select = scan.nextInt();
+			bookname = addressbook[select];
+		}
+
 		person = new Person();
 		System.out.println("Enter First Name");
 		String fname = scan.next();
@@ -43,15 +66,18 @@ public class AddressBook implements Service {
 		String phone = scan.next();
 		person.setPhone(phone);
 
-		// list.add(person);
+		list.add(person);
 		if (hashObj.get(bookname) == null) {
-			hashObj.put(bookname, new LinkedList<Person>());
-			hashObj.get(bookname).add(person);
+			hashObj.put(bookname, list);
 		}
 
+		/*List<Person> newlist = hashObj.get(bookname);
+		newlist.add(person);
+		hashObj.put(bookname, newlist);*/
 	}
 
-	public void delete(String bookname) {
+	@SuppressWarnings("unchecked")
+	public void delete() {
 		list = hashObj.get(bookname);
 		System.out.println("Enter Mobile No. of Person to be Deleted.");
 		String phone = scan.next();
@@ -68,41 +94,39 @@ public class AddressBook implements Service {
 	}
 
 	@Override
-	public void printList(String bookname) {
-		for (Entry<String, List> entry : hashObj.entrySet()) {
+	public void printList() {
+		/*for (Entry<String, List> entry : hashObj.entrySet()) {
 			String key = entry.getKey();
 			List<Person> value = entry.getValue();
-			System.out.println(key);
 			System.out
 					.println("Firstname \tLastname \tAddress \tCity \t\tState \t\tZIP \t\tPhone \n");
 			for (Person aString : value) {
 				System.out.println(aString);
 			}
+		}*/
+
+		for (int getkey = 0; getkey < numberofaddressbook; getkey++) {
+			System.out.println(getkey + " " + addressbook[getkey]);
 		}
-	}
 
-	public void printListSeperately() {
+		System.out.println("Please Select the Key");
+		int selected_key = scan.nextInt();
+		String j = addressbook[selected_key];
 
-		System.out.println("Select Address Book");
-		String addressBookName = scan.next();
+		List<Person> a = hashObj.get(j);
+		
 
-		for (Entry<String, List> entry : hashObj.entrySet()) {
-			String key = entry.getKey();
-			if (addressBookName.equals(key)) {
-				List<Person> value = entry.getValue();
-				System.out.println(key);
-				System.out
-						.println("Firstname \tLastname \tAddress \tCity \t\tState \t\tZIP \t\tPhone \n");
-				for (Person aString : value) {
-					System.out.println(aString);
-				}
-			}
-
-		}
+		 
+		  System.out.println("Firstname \tLastname \tAddress \tCity \t\tState \t\tZIP \t\tPhone \n");
+		 
+		 for(int print=0;print<a.size();print++)
+		 {
+			 System.out.println(a);
+		 }
 	}
 
 	@Override
-	public void edit(String bookname) {
+	public void edit() {
 		list = hashObj.get(bookname);
 		System.out.println("Enter Mobile No. of Person to be Edited.");
 		String phone = scan.next();
@@ -172,8 +196,9 @@ public class AddressBook implements Service {
 
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
-	public void sortByLastName(String bookname) {
+	public void sortByLastName() {
 		list = hashObj.get(bookname);
 		ArrayList arrayList = new ArrayList();
 		for (int i = 0; i < list.size(); i++) {
@@ -190,7 +215,7 @@ public class AddressBook implements Service {
 	}
 
 	@Override
-	public void sortByLastZIP(String bookname) {
+	public void sortByLastZIP() {
 		list = hashObj.get(bookname);
 		LinkedList listtwo = new LinkedList();
 		for (int i = 0; i < list.size(); i++) {
@@ -204,6 +229,17 @@ public class AddressBook implements Service {
 				}
 			}
 		}
+
+	}
+
+	@Override
+	public void createNewAddressBook() {
+		System.out.println("Enter Name of New Address Book.");
+		addressbook[numberofaddressbook] = scan.next();
+
+		hashObj.put(addressbook[numberofaddressbook], new LinkedList<Person>());
+		numberofaddressbook++;
+		System.out.println("Address Book Created");
 
 	}
 

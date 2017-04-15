@@ -22,7 +22,6 @@ public class AddressbookAppllication {
 			System.out.println("4. Edit in Address Book.");
 			System.out.println("5. Sort Address Book by last name.");
 			System.out.println("6. Sort Address Book by ZIP.");
-			System.out.println("7. Display Address Book Seperately.");
 			// System.out.println("Enter Address Book Name");
 
 			int choice = scan.nextInt();
