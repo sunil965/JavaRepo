@@ -1,0 +1,53 @@
+package com.bridge.main;
+
+import java.util.Scanner;
+
+import com.bridgelabz.controller.AddressController;
+
+public class AddressbookAppllication 
+	{
+		public static void main(String[] args) {
+			AddressController controller = new AddressController();
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Enter ADDRESS BOOK Name.");
+			String key = scan.next();
+			char ch;
+			do
+			{   System.out.println("-----ADDRESS BOOK -----");
+				System.out.println("\nSELECT YOUR CHOICE\n");
+			    System.out.println("1. ADD A PERSON");
+			    System.out.println("2. DELETE A PERSON DETAILS");
+			    System.out.println("3. VIEW ADDRESS BOOK .");
+			    System.out.println("4. MODIFY IN ADDRESS BOOK .");
+			    System.out.println("5. SORT ADDRESS BOOK BY LASTNAME.");
+			    System.out.println("6. SORT ADDRESS BOOK BY ZIP.");
+			    System.out.println("7. CREATE NEW ADDRESSBOOK");
+			    int choice = scan.nextInt();
+			    
+			    switch (choice)
+			    {
+			    case 1 :  controller.addToBook(key);
+					  	    break;
+			    /*case 2 :  controller.deleteFromBook();
+					  		break;
+			    case 3 :  controller.displayAddressBook();
+			    		    break;
+			    case 4 :  controller.editAddressBook();
+    		    		    break;
+			    case 5 :  controller.sortByLastNameBook();
+			                break;
+			    case 6 :  controller.sortByZIP();
+			                break;
+			    case 7 : controller.createNewAddressBook(key);
+			    			break;*/
+
+			    default : 
+			        System.out.println("Wrong Entry \n ");
+			        break;   
+			    }
+			    System.out.println("\nDo you want to continue (Type y or n) \n");
+			    ch = scan.next().charAt(0);                        
+			 } while(ch == 'Y'|| ch == 'y'); 
+	}
+
+}

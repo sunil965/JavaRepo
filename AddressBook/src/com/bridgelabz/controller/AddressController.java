@@ -17,7 +17,7 @@ public class AddressController {
 		addressBook.delete();
 	}
 	
-	public void displayAddressBook(){
+	public void displayAddressBook( ){
 		addressBook.printList();
 	}
 	
