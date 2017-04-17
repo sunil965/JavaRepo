@@ -13,37 +13,37 @@ public class AddressbookAppllication {
 
 		char ch;
 		do {
-			System.out.println("\nEnter Address Book Name\n");
-			String bookname = scan.next();
+			/*System.out.println("\nEnter Address Book Name\n");
+			String bookname = scan.next();*/
 			System.out.println("\nWhich Operations you want ?\n");
 			System.out.println("1. Add a person");
 			System.out.println("2. Delete a person");
-			System.out.println("3. Display a Address Book.");
+			System.out.println("3. Search a Person.");
 			System.out.println("4. Edit in Address Book.");
 			System.out.println("5. Sort Address Book by last name.");
 			System.out.println("6. Sort Address Book by ZIP.");
-			System.out.println("7. Display Address Book Seperately.");
+			System.out.println("7. Display Address Book.");
 			// System.out.println("Enter Address Book Name");
 
 			int choice = scan.nextInt();
 			switch (choice) {
 			case 1:
-				controller.addToBook(bookname);
+				controller.addToBook();
 				break;
 			case 2:
-				controller.deleteFromBook(bookname);
+				controller.deleteFromBook();
 				break;
 			case 3:
-				controller.displayAddressBook(bookname);
+				controller.displayAddressBook();
 				break;
 			case 4:
-				controller.editAddressBook(bookname);
+				controller.editAddressBook();
 				break;
 			case 5:
-				controller.sortByLastNameBook(bookname);
+				controller.sortByLastNameBook();
 				break;
 			case 6:
-				controller.sortByZIP(bookname);
+				controller.sortByZIP();
 				break;
 			case 7:
 				controller.printListSeperately();

@@ -2,17 +2,17 @@ package com.bridgelabz.controller;
 
 public interface Service {
 
-void addPerson(String bookname);
+void addPerson();
 	
-	void delete(String bookname);
+	void delete();
 	
-	void printList(String bookname);
+	void searchPerson();
 	
-	void edit(String bookname);
+	void edit();
 	
-	void sortByLastName(String bookname);
+	void sortByLastName();
 	
-	void sortByLastZIP(String bookname);
+	void sortByLastZIP();
 
 	void printListSeperately();
 }

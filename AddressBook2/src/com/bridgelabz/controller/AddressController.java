@@ -4,28 +4,28 @@ public class AddressController {
 
 	Service addressBook = new AddressBook();
 
-	public void addToBook(String bookname){
-		addressBook.addPerson(bookname);
+	public void addToBook(){
+		addressBook.addPerson();
 	}
 	
-	public void deleteFromBook(String bookname){
-		addressBook.delete(bookname);
+	public void deleteFromBook(){
+		addressBook.delete();
 	}
 	
-	public void displayAddressBook(String bookname){
-		addressBook.printList(bookname);
+	public void displayAddressBook(){
+		addressBook.searchPerson();
 	}
 	
-	public void editAddressBook(String bookname){
-		addressBook.edit(bookname);
+	public void editAddressBook(){
+		addressBook.edit();
 	}
 	
-	public void sortByLastNameBook(String bookname){
-		addressBook.sortByLastName(bookname);
+	public void sortByLastNameBook(){
+		addressBook.sortByLastName();
 	}
 	
-	public void sortByZIP(String bookname){
-		addressBook.sortByLastZIP(bookname);
+	public void sortByZIP(){
+		addressBook.sortByLastZIP();
 	}
 	
 	public void printListSeperately() {

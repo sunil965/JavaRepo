@@ -15,12 +15,18 @@ public class AddressBook implements Service {
 
 	Person person;
 	Scanner scan = new Scanner(System.in);
-	// String bookname = "friend";
+	String bookname = "";
 	List<Person> list = new LinkedList<Person>();
 	Map<String, List> hashObj = new HashMap<String, List>();
 
-	public void addPerson(String bookname) {
+	
+	// TO ADD A PERSON DETAIL.	
+	
+	public void addPerson() {
 		person = new Person();
+		System.out.println("\nEnter Address Book Name\n");
+	    bookname = scan.next();
+		
 		System.out.println("Enter First Name");
 		String fname = scan.next();
 		person.setFirstName(fname);
@@ -48,10 +54,17 @@ public class AddressBook implements Service {
 			hashObj.put(bookname, new LinkedList<Person>());
 			hashObj.get(bookname).add(person);
 		}
+		else
+			hashObj.get(bookname).add(person);
 
 	}
 
-	public void delete(String bookname) {
+	
+	// TO DELETE A PERSON DETAIL.
+	
+	public void delete() {
+		System.out.println("\nEnter Address Book Name\n");
+	    bookname = scan.next();
 		list = hashObj.get(bookname);
 		System.out.println("Enter Mobile No. of Person to be Deleted.");
 		String phone = scan.next();
@@ -67,20 +80,43 @@ public class AddressBook implements Service {
 
 	}
 
+	
+	// TO SEARCH A PARTICULAR PERSON DETAIL.
 	@Override
-	public void printList(String bookname) {
-		for (Entry<String, List> entry : hashObj.entrySet()) {
+	public void searchPerson() {
+
+		System.out.println("\nEnter Address Book Name\n");
+	    bookname = scan.next();
+		list = hashObj.get(bookname);
+		System.out.println("Enter Mobile No. of Person to be Searched.");
+		String phone = scan.next();
+		System.out.println("\nFirstname \tLastname \tAddress \tCity \t\tState \t\tZIP \t\tPhone \n");
+		for (int i = 0; i < list.size(); i++) {
+			if (phone.equals(list.get(i).getPhone())) {
+				System.out.println(hashObj.get(bookname).get(i));
+				return;
+			} else
+				System.out.println("This person is not found");
+		}
+
+/*		           // To Display Every Details Of HASHMAP
+			for (Entry<String, List> entry : hashObj.entrySet()) {
 			String key = entry.getKey();
 			List<Person> value = entry.getValue();
-			System.out.println(key);
-			System.out
-					.println("Firstname \tLastname \tAddress \tCity \t\tState \t\tZIP \t\tPhone \n");
-			for (Person aString : value) {
-				System.out.println(aString);
+			System.out.println("Details of : "+key);
+			System.out.println("\nFirstname \tLastname \tAddress \tCity \t\tState \t\tZIP \t\tPhone \n");
+			if(search.equals(entry)){
+				System.out.println(value);
 			}
-		}
+			for (Person aString : value) {
+					System.out.println(aString);
+			}
+		}*/
 	}
 
+	
+	// TO DISPLAY A PARTICULAR ADDRESSS BOOK DETAIL.
+	
 	public void printListSeperately() {
 
 		System.out.println("Select Address Book");
@@ -101,8 +137,12 @@ public class AddressBook implements Service {
 		}
 	}
 
+	
+	// TO MODIFY A PARTICULAR PERSON DETAIL.
 	@Override
-	public void edit(String bookname) {
+	public void edit() {
+		System.out.println("\nEnter Address Book Name\n");
+	    bookname = scan.next();
 		list = hashObj.get(bookname);
 		System.out.println("Enter Mobile No. of Person to be Edited.");
 		String phone = scan.next();
@@ -172,8 +212,12 @@ public class AddressBook implements Service {
 
 	}
 
+	
+	// TO SORT ADDRESSBOOK BY LAST NAME.
 	@Override
-	public void sortByLastName(String bookname) {
+	public void sortByLastName() {
+		System.out.println("\nEnter Address Book Name\n");
+	    bookname = scan.next();
 		list = hashObj.get(bookname);
 		ArrayList arrayList = new ArrayList();
 		for (int i = 0; i < list.size(); i++) {
@@ -189,8 +233,12 @@ public class AddressBook implements Service {
 		}
 	}
 
+	
+	// TO SORT ADDRESSBOOK BY ZIP.
 	@Override
-	public void sortByLastZIP(String bookname) {
+	public void sortByLastZIP() {
+		System.out.println("\nEnter Address Book Name\n");
+	    bookname = scan.next();
 		list = hashObj.get(bookname);
 		LinkedList listtwo = new LinkedList();
 		for (int i = 0; i < list.size(); i++) {
