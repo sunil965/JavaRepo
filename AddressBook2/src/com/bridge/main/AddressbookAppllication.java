@@ -5,6 +5,7 @@ import java.util.Scanner;
 import com.bridgelabz.controller.AddressController;
 
 public class AddressbookAppllication {
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		AddressController controller = new AddressController();
 		Scanner scan = new Scanner(System.in);
@@ -13,8 +14,6 @@ public class AddressbookAppllication {
 
 		char ch;
 		do {
-			/*System.out.println("\nEnter Address Book Name\n");
-			String bookname = scan.next();*/
 			System.out.println("\nWhich Operations you want ?\n");
 			System.out.println("1. Add a person");
 			System.out.println("2. Delete a person");
@@ -23,7 +22,6 @@ public class AddressbookAppllication {
 			System.out.println("5. Sort Address Book by last name.");
 			System.out.println("6. Sort Address Book by ZIP.");
 			System.out.println("7. Display Address Book.");
-			// System.out.println("Enter Address Book Name");
 
 			int choice = scan.nextInt();
 			switch (choice) {

@@ -17,11 +17,13 @@ public class AddressBook implements Service {
 	Scanner scan = new Scanner(System.in);
 	String bookname = "";
 	List<Person> list = new LinkedList<Person>();
+	@SuppressWarnings("rawtypes")
 	Map<String, List> hashObj = new HashMap<String, List>();
 
 	
 	// TO ADD A PERSON DETAIL.	
 	
+	@SuppressWarnings("unchecked")
 	public void addPerson() {
 		person = new Person();
 		System.out.println("\nEnter Address Book Name\n");
@@ -62,6 +64,7 @@ public class AddressBook implements Service {
 	
 	// TO DELETE A PERSON DETAIL.
 	
+	@SuppressWarnings("unchecked")
 	public void delete() {
 		System.out.println("\nEnter Address Book Name\n");
 	    bookname = scan.next();
@@ -82,6 +85,7 @@ public class AddressBook implements Service {
 
 	
 	// TO SEARCH A PARTICULAR PERSON DETAIL.
+	@SuppressWarnings("unchecked")
 	@Override
 	public void searchPerson() {
 
@@ -117,6 +121,7 @@ public class AddressBook implements Service {
 	
 	// TO DISPLAY A PARTICULAR ADDRESSS BOOK DETAIL.
 	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public void printListSeperately() {
 
 		System.out.println("Select Address Book");
@@ -139,6 +144,7 @@ public class AddressBook implements Service {
 
 	
 	// TO MODIFY A PARTICULAR PERSON DETAIL.
+	@SuppressWarnings("unchecked")
 	@Override
 	public void edit() {
 		System.out.println("\nEnter Address Book Name\n");
@@ -214,6 +220,7 @@ public class AddressBook implements Service {
 
 	
 	// TO SORT ADDRESSBOOK BY LAST NAME.
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public void sortByLastName() {
 		System.out.println("\nEnter Address Book Name\n");
@@ -235,6 +242,7 @@ public class AddressBook implements Service {
 
 	
 	// TO SORT ADDRESSBOOK BY ZIP.
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public void sortByLastZIP() {
 		System.out.println("\nEnter Address Book Name\n");
