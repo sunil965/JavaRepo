@@ -1,0 +1,53 @@
+package map;
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class HashMapProgram {
+
+	public static void main(String[] args) {
+		
+		Map<Integer, String> mapHttpErrors = new HashMap<>();
+		 
+		mapHttpErrors.put(200, "OK");
+		mapHttpErrors.put(null, "");		//	KEY AND VALUE CAN NOT BE NULL
+		mapHttpErrors.put(303, "See Other");
+		mapHttpErrors.put(404, "Not Found");
+		mapHttpErrors.put(null, "");
+		mapHttpErrors.put(500, "Internal Server Error");
+		 
+		System.out.println("HashMap Example        "+mapHttpErrors);
+		
+		
+		Map<String, String> mapContacts = new LinkedHashMap<>();
+		 
+		mapContacts.put("0169238175", "Tom");
+		mapContacts.put("0904891321", "Peter");
+		mapContacts.put("0169238175", "Tom");
+		mapContacts.put("", "");				// KEY AND VALUE CAN NOT BE NULL
+		mapContacts.put("0945678912", "Mary");
+		mapContacts.put("0981127421", "John");
+		 
+		System.out.println("LinkedHashMap Example  "+mapContacts);
+		
+		
+		Map<String, String> mapLang = new TreeMap<>();
+		 
+		mapLang.put(".c", "C");
+		mapLang.put(".java", "Java");
+		mapLang.put(".pl", "Perl");
+		mapLang.put(".c", "C");
+		mapLang.put("", "");					// KEY AND VALUE CAN NOT BE NULL.
+		mapLang.put(".cs", "C#");
+		mapLang.put(".php", "PHP");
+		mapLang.put(".cpp", "C++");
+		mapLang.put(".xml", "XML");
+		 
+		System.out.println("TreeMap Example        "+mapLang);
+		
+
+	}
+
+}

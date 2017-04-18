@@ -1,0 +1,17 @@
+package map;
+
+public class HashMapProgram {
+
+	public static void main(String[] args) {
+		Map<String, String> mapContacts = new LinkedHashMap<>();
+		 
+		mapContacts.put("0169238175", "Tom");
+		mapContacts.put("0904891321", "Peter");
+		mapContacts.put("0945678912", "Mary");
+		mapContacts.put("0981127421", "John");
+		 
+		System.out.println(mapContacts);
+
+	}
+
+}
