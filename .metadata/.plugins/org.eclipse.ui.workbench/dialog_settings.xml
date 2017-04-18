@@ -13,4 +13,10 @@
 		<item value="463" key="DIALOG_X_ORIGIN"/>
 		<item value="91" key="DIALOG_Y_ORIGIN"/>
 	</section>
+	<section name="ImportExportAction">
+	</section>
+	<section name="ZipFileImportWizard">
+	</section>
+	<section name="FileSystemImportWizard">
+	</section>
 </section>

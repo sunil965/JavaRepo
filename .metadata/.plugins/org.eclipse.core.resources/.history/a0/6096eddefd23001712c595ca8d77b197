@@ -1,0 +1,13 @@
+package sets;
+
+public class TreeSetPractice {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

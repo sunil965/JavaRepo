@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="TypeHierarchyViewPart.qualifiednames" value="false"/>
+	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-1.7"/>
+	<item value="false" key="TypeHierarchyViewPart.qualifiednames"/>
 	<item value="3" key="TypeHierarchyViewPart.orientation"/>
 	<item value="false" key="TypeHierarchyViewPart.linkeditors"/>
 	<item value="/home/bridgeit/Downloads" key="org.eclipse.jdt.ui.lastextjar"/>
@@ -32,7 +33,7 @@
 	</section>
 	<section name="NewClassWizardPage">
 		<item key="create_constructor" value="false"/>
-		<item value="false" key="create_main"/>
+		<item value="true" key="create_main"/>
 		<item value="true" key="create_unimplemented"/>
 	</section>
 	<section name="OptionalMessageDialog.hide.">
