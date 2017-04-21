@@ -6,6 +6,7 @@ import java.util.ListIterator;
 
 public class List {
 
+	@SuppressWarnings("rawtypes")
 	public static void main(String[] args) {
 /*	       LinkedList<String> list = new LinkedList<String>();
 	        
@@ -33,7 +34,7 @@ public class List {
 	       
 	       System.out.println("**************************************************");
 	       
-	       List list2 = new ArrayList()
+	       ArrayList list2 = new ArrayList();
 	       list2.add("One");
 	       list2.add("Two");
 	       list2.add("Three");
@@ -55,13 +56,14 @@ public class List {
 	       String second = listIterator.next();
 	       System.out.println("second:" + second);// -->"Two"
 	 
-	       // true if the list iterator has more elements when
 	       // traversing the list in the reverse direction
 	       if (listIterator.hasPrevious()) {
 	           // the previous element in the list
 	           String value = listIterator.previous();
 	           System.out.println("value:" + value);// -->"Two"
 	       }
+	       String value2 = listIterator.previous();
+           System.out.println("value2:" + value2);// -->"One"
 	 
 	       System.out.println(" ----- ");
 	 
@@ -70,6 +72,4 @@ public class List {
 	           System.out.println("value:" + value);
 	       }
 	   }
-	   
-
 }

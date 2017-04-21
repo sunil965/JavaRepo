@@ -23,6 +23,7 @@ public class HashSetPractical {
 		while(itr.hasNext()){
 			System.out.print(itr.next()+", ");
 		}
+		
 		System.out.println("\n\n");
 		System.out.println("******HashSet with Initial Capacity******");
 		Set<String> set2 = new HashSet<>(4);
@@ -33,7 +34,11 @@ public class HashSetPractical {
 		set2.add("prince");
 		set2.add("manoj");
 		set2.add("pawne");
+		set2.add("sunil");
 		set2.add(null);
+		
+		
+		
 		System.out.println("Size : "+set2.size());
 		Iterator<String> itr2 = set2.iterator();
 		while(itr2.hasNext()){

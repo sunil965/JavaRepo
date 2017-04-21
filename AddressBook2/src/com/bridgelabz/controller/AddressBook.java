@@ -1,5 +1,10 @@
 package com.bridgelabz.controller;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -50,15 +55,15 @@ public class AddressBook implements Service {
 		System.out.println("Enter Phone No");
 		String phone = scan.next();
 		person.setPhone(phone);
-
 		// list.add(person);
 		if (hashObj.get(bookname) == null) {
 			hashObj.put(bookname, new LinkedList<Person>());
 			hashObj.get(bookname).add(person);
+			serialize();
 		}
 		else
 			hashObj.get(bookname).add(person);
-
+		    serialize();
 	}
 
 	
@@ -68,13 +73,14 @@ public class AddressBook implements Service {
 	public void delete() {
 		System.out.println("\nEnter Address Book Name\n");
 	    bookname = scan.next();
+	    deSerialize();					// TO GET hashObj FROM FILE.
 		list = hashObj.get(bookname);
 		System.out.println("Enter Mobile No. of Person to be Deleted.");
 		String phone = scan.next();
 		for (int i = 0; i < list.size(); i++) {
 			if (phone.equals(list.get(i).getPhone())) {
 				list.remove(hashObj.get(bookname).get(i));
-				// System.out.println(hashObj.get(key));
+				serialize();
 				System.out.println(".....DELETED......");
 				return;
 			} else
@@ -88,7 +94,7 @@ public class AddressBook implements Service {
 	@SuppressWarnings("unchecked")
 	@Override
 	public void searchPerson() {
-
+		
 		System.out.println("\nEnter Address Book Name\n");
 	    bookname = scan.next();
 		list = hashObj.get(bookname);
@@ -103,7 +109,7 @@ public class AddressBook implements Service {
 				System.out.println("This person is not found");
 		}
 
-/*		           // To Display Every Details Of HASHMAP
+/*		  // To Display Every Details Of HASHMAP
 			for (Entry<String, List> entry : hashObj.entrySet()) {
 			String key = entry.getKey();
 			List<Person> value = entry.getValue();
@@ -126,8 +132,18 @@ public class AddressBook implements Service {
 
 		System.out.println("Select Address Book");
 		String addressBookName = scan.next();
-
-		for (Entry<String, List> entry : hashObj.entrySet()) {
+		deSerialize();
+		
+		List<Person> displaying = hashObj.get(addressBookName);
+		System.out
+		.println("Firstname \tLastname \tAddress \tCity \t\tState \t\tZIP \t\tPhone \n");
+		for(int i=0; i<displaying.size();i++){
+			System.out.println(displaying.get(i));
+		}
+		
+		// THIS BELOW CODE WAS USED WITHOUT DESERIALIZATION
+		
+		/*for (Entry<String, List> entry : hashObj.entrySet()) {
 			String key = entry.getKey();
 			if (addressBookName.equals(key)) {
 				List<Person> value = entry.getValue();
@@ -139,7 +155,7 @@ public class AddressBook implements Service {
 				}
 			}
 
-		}
+		}*/
 	}
 
 	
@@ -178,30 +194,35 @@ public class AddressBook implements Service {
 						String newAddress = scan.next();
 						list.get(i).setAddress(newAddress);
 						System.out.println("Address Updated");
+						serialize();
 						break;
 					case 2:
 						System.out.println("Enter New City");
 						String newCity = scan.next();
 						list.get(i).setCity(newCity);
 						System.out.println("City Updated");
+						serialize();
 						break;
 					case 3:
 						System.out.println("Enter New State");
 						String newState = scan.next();
 						list.get(i).setState(newState);
 						System.out.println("State Updated");
+						serialize();
 						break;
 					case 4:
 						System.out.println("Enter New ZIP");
 						String newZIP = scan.next();
 						list.get(i).setZip(newZIP);
 						System.out.println("ZIP Updated");
+						serialize();
 						break;
 					case 5:
 						System.out.println("Enter New Phone Number");
 						String newPhone = scan.next();
 						list.get(i).setPhone(newPhone);
 						System.out.println("Phone Number Updated");
+						serialize();
 						break;
 					default:
 						System.out.println("Wrong Entry \n ");
@@ -261,6 +282,32 @@ public class AddressBook implements Service {
 			}
 		}
 
+	}
+	public void serialize(){
+		try {
+			FileOutputStream fileWriter = new FileOutputStream("/home/bridgeit/JavaRepo/s.ser");
+			ObjectOutputStream objectStreamWriter = new ObjectOutputStream(fileWriter);
+			objectStreamWriter.writeObject(hashObj);
+			objectStreamWriter.flush();
+			objectStreamWriter.close();
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void deSerialize(){
+		try {
+			FileInputStream fileReader = new FileInputStream("/home/bridgeit/JavaRepo/s.ser");
+			ObjectInputStream objectStreamReader = new ObjectInputStream(fileReader);
+			hashObj = (Map<String, List>) objectStreamReader.readObject();
+			objectStreamReader.close();
+			fileReader.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

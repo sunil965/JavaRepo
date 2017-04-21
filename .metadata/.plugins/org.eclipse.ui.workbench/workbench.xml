@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="14" version="2.0">
+<workbench progressCount="15" version="2.0">
 <workbenchAdvisor/>
-<window height="715" maximized="true" width="1018" x="65" y="24">
+<window height="706" maximized="true" width="1032" x="65" y="24">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -21,7 +21,7 @@
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -30,21 +30,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="package-info.java" partName="package-info.java" path="/home/bridgeit/JavaRepo/Collection/src/collection/package-info.java" title="package-info.java" tooltip="Collection/src/collection/package-info.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Collection/src/collection/package-info.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="List.java" partName="List.java" path="/home/bridgeit/JavaRepo/Collection/src/collection/List.java" title="List.java" tooltip="Collection/src/collection/List.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Collection/src/collection/List.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1096" selectionTopPixel="0"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc">
@@ -82,23 +71,18 @@
 </customFilters>
 </viewState>
 </view>
-<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
-<viewState/>
-</view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings (100 of 111 items)"/>
-<category IMemento.internal.id="Warnings"/>
-</expanded>
-<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="360" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
+<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="105" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
 </view>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
@@ -128,7 +112,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -243,11 +227,11 @@
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <hide_toolbar_item_id id="org.eclipse.debug.ui.commands.RunToLine"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.jdt.ui.TypeHierarchy"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
-<view id="org.eclipse.jdt.ui.PackageExplorer"/>
-<view id="org.eclipse.jdt.ui.TypeHierarchy"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
 <layout>
@@ -273,7 +257,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.17364341" ratioLeft="224" ratioRight="1066" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.7327327" ratioLeft="488" ratioRight="178" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.7672673" ratioLeft="511" ratioRight="155" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
@@ -385,182 +369,12 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JavaBasicPrograms/src/com/bridgelabz/week1/LeapYear.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JavaBasicPrograms/src/com/bridgelabz/utility/package-info.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JavaBasicPrograms/src/com/bridgelabz/utility/Utility.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JavaBasicPrograms/src/com/bridgelabz/week1/Anagram.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JavaBasicPrograms/src/com/bridgelabz/week1/ArraysProgram.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JavaBasicPrograms/src/com/bridgelabz/week1/CountCoupon.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JavaBasicPrograms/src/com/bridgelabz/week1/Flipcoin.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Test/src/Frog.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Collection/src/collection/package-info.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Collection/src/collection/List.java"/>
-</editors>
-<item historyLabel="Utility.java" index="2">
-<position info="not_deleted" x="471" y="10"/>
-</item>
-<item historyLabel="LeapYear.java" index="0">
-<position/>
-</item>
-<item historyLabel="Utility.java" index="2">
-<position info="not_deleted" x="213" y="0"/>
-</item>
-<item historyLabel="LeapYear.java" index="0">
-<position info="not_deleted" x="181" y="0"/>
-</item>
-<item historyLabel="package-info.java" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="LeapYear.java" index="0">
-<position info="not_deleted" x="181" y="0"/>
-</item>
-<item historyLabel="Utility.java" index="2">
-<position info="not_deleted" x="213" y="0"/>
-</item>
-<item historyLabel="LeapYear.java" index="0">
-<position info="not_deleted" x="181" y="0"/>
-</item>
-<item historyLabel="Utility.java" index="2">
-<position info="not_deleted" x="213" y="0"/>
-</item>
-<item historyLabel="Anagram.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Anagram.java" index="3">
-<position info="not_deleted" x="258" y="0"/>
-</item>
-<item historyLabel="Anagram.java" index="3">
-<position info="not_deleted" x="346" y="0"/>
-</item>
-<item historyLabel="Anagram.java" index="3">
-<position info="not_deleted" x="715" y="0"/>
-</item>
-<item historyLabel="Anagram.java" index="3">
-<position info="not_deleted" x="56" y="0"/>
-</item>
-<item historyLabel="Utility.java" index="2">
-<position info="not_deleted" x="213" y="0"/>
-</item>
-<item historyLabel="ArraysProgram.java" index="4">
-<position info="not_deleted" x="329" y="0"/>
-</item>
-<item historyLabel="Utility.java" index="2">
-<position info="not_deleted" x="471" y="10"/>
-</item>
-<item historyLabel="ArraysProgram.java" index="4">
-<position info="not_deleted" x="329" y="0"/>
-</item>
-<item historyLabel="ArraysProgram.java" index="4">
-<position info="not_deleted" x="388" y="0"/>
-</item>
-<item historyLabel="ArraysProgram.java" index="4">
-<position info="not_deleted" x="629" y="0"/>
-</item>
-<item historyLabel="ArraysProgram.java" index="4">
-<position info="not_deleted" x="222" y="11"/>
-</item>
-<item historyLabel="Utility.java" index="2">
-<position info="not_deleted" x="471" y="10"/>
-</item>
-<item historyLabel="CountCoupon.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="CountCoupon.java" index="5">
-<position info="not_deleted" x="264" y="0"/>
-</item>
-<item historyLabel="CountCoupon.java" index="5">
-<position info="not_deleted" x="56" y="0"/>
-</item>
-<item historyLabel="Flipcoin.java" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="CountCoupon.java" index="5">
-<position info="not_deleted" x="95" y="0"/>
-</item>
-<item historyLabel="CountCoupon.java" index="5">
-<position info="not_deleted" x="302" y="0"/>
-</item>
-<item historyLabel="CountCoupon.java" index="5">
-<position info="not_deleted" x="622" y="0"/>
-</item>
-<item historyLabel="Utility.java" index="2">
-<position info="not_deleted" x="471" y="10"/>
-</item>
-<item historyLabel="CountCoupon.java" index="5">
-<position info="not_deleted" x="622" y="0"/>
-</item>
-<item historyLabel="CountCoupon.java" index="5">
-<position info="not_deleted" x="432" y="0"/>
-</item>
-<item historyLabel="CountCoupon.java" index="5">
-<position info="not_deleted" x="618" y="0"/>
-</item>
-<item historyLabel="Flipcoin.java" index="6">
-<position info="not_deleted" x="204" y="0"/>
-</item>
-<item historyLabel="Frog.java" index="7">
-<position/>
-</item>
-<item historyLabel="Frog.java" index="7">
-<position info="not_deleted" x="131" y="0"/>
-</item>
-<item historyLabel="Frog.java" index="7">
-<position/>
-</item>
-<item historyLabel="Frog.java" index="7">
-<position info="not_deleted" x="458" y="0"/>
-</item>
-<item historyLabel="Frog.java" index="7">
-<position/>
-</item>
-<item historyLabel="Frog.java" index="7">
-<position info="not_deleted" x="372" y="0"/>
-</item>
-<item historyLabel="Frog.java" index="7">
-<position info="not_deleted" x="699" y="0"/>
-</item>
-<item historyLabel="Frog.java" index="7">
-<position info="not_deleted" x="437" y="0"/>
-</item>
-<item historyLabel="Frog.java" index="7">
-<position info="not_deleted" x="455" y="0"/>
-</item>
-<item historyLabel="Frog.java" index="7">
-<position/>
-</item>
-<item historyLabel="Frog.java" index="7">
-<position info="not_deleted" x="537" y="0"/>
-</item>
-<item historyLabel="Flipcoin.java" index="6">
-<position info="not_deleted" x="204" y="0"/>
-</item>
-<item historyLabel="CountCoupon.java" index="5">
-<position info="not_deleted" x="618" y="0"/>
-</item>
-<item historyLabel="Utility.java" index="2">
-<position info="not_deleted" x="471" y="10"/>
-</item>
-<item historyLabel="package-info.java" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item active="true" historyLabel="List.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="left"/>
-</trimArea>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="right"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -568,55 +382,54 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestEmp.java" tooltip="HashCoding/src/hashing/sample/program/TestEmp.java">
+<persistable path="/HashCoding/src/hashing/sample/program/TestEmp.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AddressbookAppllication.java" tooltip="AddressBook2/src/com/bridge/main/AddressbookAppllication.java">
+<persistable path="/AddressBook2/src/com/bridge/main/AddressbookAppllication.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HashCodeOverride.java" tooltip="Collection/src/sets/HashCodeOverride.java">
+<persistable path="/Collection/src/sets/HashCodeOverride.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TreeSetPractice.java" tooltip="Collection/src/sets/TreeSetPractice.java">
+<persistable path="/Collection/src/sets/TreeSetPractice.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LinkedHashSetProgram.java" tooltip="Collection/src/sets/LinkedHashSetProgram.java">
+<persistable path="/Collection/src/sets/LinkedHashSetProgram.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HashSetPractical.java" tooltip="Collection/src/sets/HashSetPractical.java">
+<persistable path="/Collection/src/sets/HashSetPractical.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="List.java" tooltip="Collection/src/collection/List.java">
 <persistable path="/Collection/src/collection/List.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="package-info.java" tooltip="Collection/src/collection/package-info.java">
-<persistable path="/Collection/src/collection/package-info.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AddressbookAppllication.java" tooltip="AddressBook/src/com/bridge/main/AddressbookAppllication.java">
+<persistable path="/AddressBook/src/com/bridge/main/AddressbookAppllication.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Frog.java" tooltip="Test/src/Frog.java">
-<persistable path="/Test/src/Frog.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="package-info.java" tooltip="AddressBook/src/com/bridge/main/package-info.java">
+<persistable path="/AddressBook/src/com/bridge/main/package-info.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Flipcoin.java" tooltip="JavaBasicPrograms/src/com/bridgelabz/week1/Flipcoin.java">
-<persistable path="/JavaBasicPrograms/src/com/bridgelabz/week1/Flipcoin.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Person.java" tooltip="AddressBook/src/com/bridgelabz/model/Person.java">
+<persistable path="/AddressBook/src/com/bridgelabz/model/Person.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CountCoupon.java" tooltip="JavaBasicPrograms/src/com/bridgelabz/week1/CountCoupon.java">
-<persistable path="/JavaBasicPrograms/src/com/bridgelabz/week1/CountCoupon.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AddressBook.java" tooltip="AddressBook/src/com/bridgelabz/controller/AddressBook.java">
+<persistable path="/AddressBook/src/com/bridgelabz/controller/AddressBook.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ArraysProgram.java" tooltip="JavaBasicPrograms/src/com/bridgelabz/week1/ArraysProgram.java">
-<persistable path="/JavaBasicPrograms/src/com/bridgelabz/week1/ArraysProgram.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Emp.java" tooltip="HashCoding/src/hashing/sample/program/Emp.java">
+<persistable path="/HashCoding/src/hashing/sample/program/Emp.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Anagram.java" tooltip="JavaBasicPrograms/src/com/bridgelabz/week1/Anagram.java">
-<persistable path="/JavaBasicPrograms/src/com/bridgelabz/week1/Anagram.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserImplement.java" tooltip="HashCoding/src/hashing/sample/program/UserImplement.java">
+<persistable path="/HashCoding/src/hashing/sample/program/UserImplement.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Utlity.java" tooltip="JavaBasicPrograms/src/com/bridgelabz/utility/Utlity.java">
-<persistable path="/JavaBasicPrograms/src/com/bridgelabz/utility/Utlity.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="User.java" tooltip="HashCoding/src/hashing/sample/program/User.java">
+<persistable path="/HashCoding/src/hashing/sample/program/User.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="package-info.java" tooltip="JavaBasicPrograms/src/com/bridgelabz/utility/package-info.java">
-<persistable path="/JavaBasicPrograms/src/com/bridgelabz/utility/package-info.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Utility.java" tooltip="Java/src/com/bridgelabz/utlity/Utility.java">
-<persistable path="/Java/src/com/bridgelabz/utlity/Utility.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Stopwatch.java" tooltip="JavaBasicPrograms/src/com/bridgelabz/week1/Stopwatch.java">
-<persistable path="/JavaBasicPrograms/src/com/bridgelabz/week1/Stopwatch.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Triplet.java" tooltip="JavaBasicPrograms/src/com/bridgelabz/week1/Triplet.java">
-<persistable path="/JavaBasicPrograms/src/com/bridgelabz/week1/Triplet.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StringBserach.java" tooltip="JavaBasicPrograms/src/com/bridgelabz/week1/StringBserach.java">
-<persistable path="/JavaBasicPrograms/src/com/bridgelabz/week1/StringBserach.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StockReport.java" tooltip="JavaBasicPrograms/src/com/bridgelabz/week1/StockReport.java">
-<persistable path="/JavaBasicPrograms/src/com/bridgelabz/week1/StockReport.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ReplaceString.java" tooltip="JavaBasicPrograms/src/com/bridgelabz/week1/ReplaceString.java">
-<persistable path="/JavaBasicPrograms/src/com/bridgelabz/week1/ReplaceString.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="package-info.java" tooltip="HashCoding/src/hashing/sample/program/package-info.java">
+<persistable path="/HashCoding/src/hashing/sample/program/package-info.java"/>
 </file>
 </mruList>
 </workbench>

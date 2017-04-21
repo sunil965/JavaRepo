@@ -1,0 +1,15 @@
+package hashing.sample.program;
+
+public class UserImplement {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		User u1 = new User("sunil",24,"passport");
+		System.out.println("Overridden HashCode : "+u1.hashCode());
+		int originalHashCode = System.identityHashCode(u1);
+		System.out.println("Original HashCode : "+originalHashCode);
+	}
+
+}
