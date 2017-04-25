@@ -15,13 +15,14 @@ public class AddressbookAppllication {
 		char ch;
 		do {
 			System.out.println("\nWhich Operations you want ?\n");
-			System.out.println("1. Add a person");
-			System.out.println("2. Delete a person");
+			System.out.println("1. Add a Person");
+			System.out.println("2. Delete a Person.");
 			System.out.println("3. Search a Person.");
 			System.out.println("4. Edit in Address Book.");
 			System.out.println("5. Sort Address Book by last name.");
 			System.out.println("6. Sort Address Book by ZIP.");
-			System.out.println("7. Display Address Book.");
+			System.out.println("7. Display Address Book Details.");
+			System.out.println("8. Availabes Address Books.");
 
 			int choice = scan.nextInt();
 			switch (choice) {
@@ -46,7 +47,9 @@ public class AddressbookAppllication {
 			case 7:
 				controller.printListSeperately();
 				break;
-
+			case 8:
+				controller.getAddressBooks();
+				break;
 			default:
 				System.out.println("Wrong Entry \n ");
 				break;

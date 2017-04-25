@@ -1,17 +1,16 @@
 package com.bridgelabz.controller;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.security.KeyStore.Entry;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Scanner;
 
 import com.bridgelabz.model.Person;
@@ -154,7 +153,6 @@ public class AddressBook implements Service {
 					System.out.println(aString);
 				}
 			}
-
 		}*/
 	}
 
@@ -307,6 +305,24 @@ public class AddressBook implements Service {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
+	}
+
+
+	@Override
+	public void getAddressBooks() {
+		deSerialize();
+		for (Map.Entry<String, List> entry : hashObj.entrySet()) {
+			String key = entry.getKey();
+			/*if (addressBookName.equals(key)) {
+				List<Person> value = entry.getValue();*/
+				System.out.println(key);
+				/*System.out
+						.println("Firstname \tLastname \tAddress \tCity \t\tState \t\tZIP \t\tPhone \n");
+				for (Person aString : value) {
+					System.out.println(aString);
+				}
+			}*/
 		}
 	}
 

@@ -30,7 +30,9 @@ public class AddressController {
 	
 	public void printListSeperately() {
 		addressBook.printListSeperately();
-		
 	}
-
+	
+	public void getAddressBooks(){
+		addressBook.getAddressBooks();
+	}
 }
