@@ -1,7 +1,0 @@
-package com.bridgelabz.controller;
-
-import com.bridgelabz.model.Person;
-
-public interface Service {
-	public String addPerson(Person person);
-}

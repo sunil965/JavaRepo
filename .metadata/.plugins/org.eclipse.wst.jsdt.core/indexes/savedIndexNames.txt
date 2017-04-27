@@ -1,7 +1,0 @@
-INDEX VERSION 1.3+/home/bridgeit/JavaRepo/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-630758482.index
-1143417119.index
-3377081953.index
-3281108097.index
-3698524909.index
-355618336.index
