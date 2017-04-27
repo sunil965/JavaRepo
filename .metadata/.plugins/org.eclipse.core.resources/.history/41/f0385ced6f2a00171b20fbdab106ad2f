@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div><hi>Welcome Here.</hi></div>
+<div>
+<center>
+<form action="LoginServlet" method="get">
+<div>Username : <input type="text" id="name"><br></div>
+<div>Password : <input type="password" id="name"><br></div>
+<input type="submit">
+</form>
+</center>
+</div>
+
+
+</body>
+</html>

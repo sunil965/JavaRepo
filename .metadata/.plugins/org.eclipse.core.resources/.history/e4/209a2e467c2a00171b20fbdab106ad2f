@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Register Here</h1>
+<div>
+	<form action="RegisterServlet" method="post"><br><br>
+	 UserName : <input type="text" name="user"/><br><br>
+	 Email_ID :<input type="text" name="eid"/><br><br>
+	 Password :<input type="password" name="pwd"/><br><br>
+	 FirstName : <input type="text" name="fname"/><br><br>
+	 LastName : <input type="text" name="lname"/><br><br>
+	 Address : <input type="text" name="address"/><br><br>
+	 City : <input type="text" name="city"/><br><br>
+	 Pin_Code :<input type="text" name="state"/><br><br>
+	 Contact :<input type="text" name="contact"/><br><br>
+	</form>
+</div>
+
+</body>
+</html>
